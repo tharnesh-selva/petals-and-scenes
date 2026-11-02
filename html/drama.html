@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drama Details | Petal & Scene</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/extras.css">
+    <link rel="stylesheet" href="../css/shell.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <style>
+        body {
+            --site-bg-image: url('../assets/background/red-sun-mountain.jpg');
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" id="siteHeader"></header>
+
+    <main class="container section">
+        <!-- Clean Back Navigation Link Structure Layer -->
+        <div style="margin-bottom: 24px;">
+            <a href="discover.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px;">
+                ← Back to Discover
+            </a>
+        </div>
+
+        <div class="glass-card style-detail-wrapper" style="padding: 40px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px;">
+            <div class="detail-poster-wrapper">
+                <img id="dramaPoster" src="../assets/posters/Crash landing on you.jpg" alt="Drama Poster" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+            </div>
+
+            <div class="detail-info-panel">
+                <h1 id="dramaTitle" class="glow-text" style="font-size: 3rem; margin-bottom: 8px;">Loading Title...</h1>
+                <p id="dramaOriginalTitle" style="font-style: italic; color: var(--sakura); margin-bottom: 20px;">Drama Timeline Tracking Matrix</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; color: var(--muted);">
+                    <div><strong>Year:</strong> <span id="dramaYear">--</span></div>
+                    <div><strong>Country:</strong> <span id="dramaCountry">--</span></div>
+                    <div><strong>Episodes:</strong> <span id="dramaEpisodes">--</span></div>
+                    <div><strong>Rating:</strong> <span class="rating-val" style="color: var(--sakura); font-weight: bold;">--</span></div>
+                </div>
+
+                <div style="margin-bottom: 32px;">
+                    <label style="display: block; margin-bottom: 8px; color: var(--moonlight);">Update Watch Status</label>
+                    <select class="status-selector" style="width: 100%; max-width: 300px; padding: 12px; background: var(--midnight-soft); color: var(--moonlight); border: 1px solid var(--glass-border); border-radius: 8px; outline: none;">
+                        <option value="None">Not Saved</option>
+                        <option value="Plan to watch">Plan to watch</option>
+                        <option value="Watching">Watching</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+
+                <h2 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--moonlight);">Synopsis</h2>
+                <p style="color: var(--muted); line-height: 1.8; margin-bottom: 32px;">
+                    A short, spoiler-free synopsis will appear here. It introduces the main characters, the setting, and the central question of the story in two to four sentences.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="border-top: 1px solid var(--glass-border); padding-block: 40px; margin-top: 60px; text-align: center; color: var(--muted); font-size: 0.9rem;">
+        <p class="glow-text" style="margin-bottom: 12px;">夜桜と物語 – stories worth staying up for.</p>
+        <p>© 2026 Petal & Scene. Made for a college project.</p>
+    </footer>
+
+    <script src="../js/dramas.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/moodbloom.js"></script>
+    <script src="../js/drama.js"></script>
+    <script src="../js/transitions.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/extras.js"></script>
+    <script src="../js/companion.js"></script>
+</body>
+</html>

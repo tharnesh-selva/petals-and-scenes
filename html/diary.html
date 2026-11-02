@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Diary | Petal & Scene</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/extras.css">
+    <link rel="stylesheet" href="../css/shell.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <style>
+        body {
+            --site-bg-image: url('../assets/background/diary.png');
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" id="siteHeader"></header>
+
+    <main class="container">
+        <section class="section section-heading fade-up">
+            <h1>Your diary</h1>
+            <p>Pick a feeling, write how a drama made you feel, and watch the site take on its colour. The feeling you log most becomes the site's default glow.</p>
+        </section>
+
+        <!-- Two Column Form vs Stream Layout Split -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+            
+            <!-- Log Entry Input Form Component -->
+            <section class="glass-card" style="padding: 32px;">
+                <h2 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--moonlight);">New entry</h2>
+                <label style="display:block;margin-bottom:10px;">Pick a feeling</label>
+                <div id="moodChips" class="mood-chips"></div>
+                <div id="moodBanner" class="mood-banner"></div>
+                <form class="diary-form" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px;">Drama</label>
+                        <select class="drama-select" style="width: 100%; padding: 12px; background: var(--midnight-soft); color: var(--moonlight); border: 1px solid var(--glass-border); border-radius: 8px; outline: none;"></select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px;">How did it make you feel?</label>
+                        <select class="mood-select-menu" style="width: 100%; padding: 12px; background: var(--midnight-soft); color: var(--moonlight); border: 1px solid var(--glass-border); border-radius: 8px; outline: none;"></select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px;">Your rating</label>
+                        <select class="score-select" style="width: 100%; padding: 12px; background: var(--midnight-soft); color: var(--moonlight); border: 1px solid var(--glass-border); border-radius: 8px; outline: none; margin-bottom: 20px;"><option value="5">★★★★★ Loved it</option><option value="4">★★★★ Really good</option><option value="3">★★★ It was fine</option><option value="2">★★ Not for me</option><option value="1">★ Disappointed</option></select>
+                        <label style="display: block; margin-bottom: 8px;">Entry Title</label>
+                        <input type="text" class="entry-title-input" required style="width: 100%; padding: 12px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--moonlight); outline: none;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px;">Your Thoughts</label>
+                        <textarea class="thoughts-textarea" rows="5" required style="width: 100%; padding: 12px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--moonlight); outline: none; resize: none;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Save entry</button>
+                </form>
+            </section>
+
+            <!-- Live Timeline Stream Container -->
+            <section class="past-entries-list">
+                <h2 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--moonlight);">Past entries</h2>
+                <div class="entries-stream-container"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/dramas.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/moodbloom.js"></script>
+    <script src="../js/diary.js"></script>
+    <script src="../js/transitions.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/extras.js"></script>
+    <script src="../js/companion.js"></script>
+</body>
+</html>

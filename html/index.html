@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Sakura Drama Discovery | Petal & Scene</title>
+    <!-- Relative system stylesheet routing layers -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/extras.css">
+    <link rel="stylesheet" href="../css/shell.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <style>
+        body {
+            --site-bg-image: url('../assets/background/home.png');
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating background particle ambient layer -->
+    
+
+    <!-- Navigation Header Panel -->
+    <header class="site-header" id="siteHeader"></header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        
+        <!-- Hero Introduction Spotlight Section -->
+        <section class="section section-heading fade-up">
+            <h1>Find your next story under the moonlit blossoms</h1>
+            <p>Search by title, genre or mood, save what you want to watch, write down how each episode felt, and grow a garden from every drama you finish.</p>
+            <div style="margin-top: 24px; display: flex; gap: 16px;">
+                <a href="discover.html" class="btn btn-primary">Start exploring</a>
+                <a href="garden.html" class="btn btn-outline">Visit your garden</a>
+            </div>
+        </section>
+
+        <!-- Tonight's Spotlight Row Grid -->
+        <section class="section">
+            <div class="section-heading">
+                <h2 class="glow-text">Tonight's picks</h2>
+                <p>A hand-picked row of dramas for a quiet evening.</p>
+            </div>
+            
+            <!-- JavaScript targets this container anchor to inject grid cards -->
+            <div class="drama-grid">
+                <div style="grid-column: 1/-1; padding: 40px; text-align: center; color: var(--muted);">
+                    Illuminating stories under the moonlit blossoms...
+                </div>
+            </div>
+            
+            <div style="margin-top: 32px; text-align: center;">
+                <a href="discover.html" class="btn btn-outline">Browse all dramas</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <h2 class="glow-text">Matchmaker picks</h2>
+                <p>Chosen from the genres of dramas you rated 4 stars or higher in your diary.</p>
+            </div>
+            <div class="drama-grid" id="matchmakerGrid"></div>
+        </section>
+
+        <!-- Browse By Genre Quick Access Section -->
+        <section class="section">
+            <div class="section-heading">
+                <h2 class="glow-text">Browse by genre</h2>
+                <p>Pick a genre to jump straight into a filtered search list.</p>
+            </div>
+            <div class="glass-card" style="padding: 32px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                <a href="discover.html?genre=Romance" class="genre-tag">Romance</a>
+                <a href="discover.html?genre=Mystery" class="genre-tag">Mystery</a>
+                <a href="discover.html?genre=Fantasy" class="genre-tag">Fantasy</a>
+                <a href="discover.html?genre=Historical" class="genre-tag">Historical</a>
+                <a href="discover.html?genre=Slice-of-life" class="genre-tag">Slice of life</a>
+                <a href="discover.html?genre=Thriller" class="genre-tag">Thriller</a>
+                <a href="discover.html?genre=Comedy" class="genre-tag">Comedy</a>
+                <a href="discover.html?genre=Supernatural" class="genre-tag">Supernatural</a>
+                <a href="discover.html?genre=Medical" class="genre-tag">Medical</a>
+                <a href="discover.html?genre=Family" class="genre-tag">Family</a>
+            </div>
+        </section>
+
+        <!-- Application Workflow Explainer Grid -->
+        <section class="section" style="border-top: 1px solid var(--glass-border);">
+            <div class="section-heading" style="text-align: center; margin-inline: auto;">
+                <h2 class="glow-text">How Petal & Scene works</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 32px;">
+                <div class="glass-card" style="padding: 24px;">
+                    <div style="font-size: 2rem; margin-bottom: 12px; color: var(--sakura);">01</div>
+                    <h3>Discover</h3>
+                    <p style="margin-top: 8px;">Search and filter by genre to find dramas that fit tonight's mood.</p>
+                </div>
+                <div class="glass-card" style="padding: 24px;">
+                    <div style="font-size: 2rem; margin-bottom: 12px; color: var(--sakura);">02</div>
+                    <h3>Save</h3>
+                    <p style="margin-top: 8px;">Add dramas to your collection and mark what you are watching or have finished.</p>
+                </div>
+                <div class="glass-card" style="padding: 24px;">
+                    <div style="font-size: 2rem; margin-bottom: 12px; color: var(--sakura);">03</div>
+                    <h3>Reflect</h3>
+                    <p style="margin-top: 8px;">Log a diary entry with your mood after each episode you experience.</p>
+                </div>
+                <div class="glass-card" style="padding: 24px;">
+                    <div style="font-size: 2rem; margin-bottom: 12px; color: var(--sakura);">04</div>
+                    <h3>Grow</h3>
+                    <p style="margin-top: 8px;">Watch blossoms open in your garden as your collection and diary fill up.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emotional Mood Quick Redirect Selector -->
+        <section class="section glass-card" style="padding: 40px; margin-bottom: 60px; text-align: center;">
+            <h2 class="glow-text">How are you feeling tonight?</h2>
+            <p style="margin-top: 8px; margin-bottom: 24px;">Choose a mood to start a fresh timeline diary entry.</p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                <a href="diary.html?mood=cozy" class="genre-tag">🍵 Cozy</a>
+                <a href="diary.html?mood=hopeful" class="genre-tag">🌅 Hopeful</a>
+                <a href="diary.html?mood=nostalgic" class="genre-tag">🏮 Nostalgic</a>
+                <a href="diary.html?mood=serene" class="genre-tag">🌙 Serene</a>
+                <a href="diary.html?mood=thrilled" class="genre-tag">⚡ Thrilled</a>
+                <a href="diary.html?mood=inspired" class="genre-tag">✨ Inspired</a>
+                <a href="diary.html?mood=melancholy" class="genre-tag">🌧 Melancholy</a>
+                <a href="diary.html?mood=heartbroken" class="genre-tag">🥀 Heartbroken</a>
+            </div>
+            <div style="margin-top: 32px;">
+                <a href="diary.html" class="btn btn-primary">Open your diary</a>
+            </div>
+        </section>
+
+        <!-- Ambient Garden Banner -->
+        <section class="section" style="border-top: 1px solid var(--glass-border); text-align: center;">
+            <h2 class="glow-text">A garden that remembers what you watched</h2>
+            <p style="margin-top: 10px; margin-bottom: 24px;">Every finished drama plants a blossom. Every diary entry makes it glow a little brighter.</p>
+            <a href="garden.html" class="btn btn-outline">Step into the garden</a>
+        </section>
+    </main>
+
+    <!-- Global Application Footer Structure -->
+    <footer style="border-top: 1px solid var(--glass-border); padding-block: 40px; margin-top: 60px; text-align: center; color: var(--muted); font-size: 0.9rem;">
+        <p class="glow-text" style="margin-bottom: 12px;">夜桜と物語 – stories worth staying up for.</p>
+        <p>A college web project celebrating Asian drama, one quiet night at a time.</p>
+        <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.6;">© 2026 Petal & Scene. Made for a college project.</p>
+    </footer>
+
+    <!-- Modular Script Injection Matrix -->
+    <script src="../js/dramas.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/moodbloom.js"></script>
+    <script src="../js/matchmaker.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/transitions.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/extras.js"></script>
+    <script src="../js/companion.js"></script>
+</body>
+</html>

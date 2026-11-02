@@ -1,0 +1,175 @@
+/* ==========================================================================
+   PETAL & SCENE — INTERACTIVE COMPONENTS & GLASS UI MODULES
+   ========================================================================== */
+
+/* 1. GLASS CORE UTILITY LAYER */
+.glass-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    color: var(--moonlight);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+/* 3. BUTTON SYSTEM INTERACTION PACK */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 30px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.btn-primary {
+    color: var(--midnight);
+    background: linear-gradient(135deg, var(--sakura-light), var(--sakura));
+    box-shadow: 0 4px 20px rgba(240, 168, 194, 0.25);
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(240, 168, 194, 0.45);
+}
+
+.btn-outline {
+    color: var(--sakura-light);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(240, 168, 194, 0.45);
+}
+
+.btn-outline:hover {
+    background: rgba(240, 168, 194, 0.15);
+    border-color: var(--sakura);
+    transform: translateY(-2px);
+}
+
+/* 4. DRAMA SHIFT GRID TILES */
+.drama-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 28px;
+    position: relative;
+    z-index: 10;
+}
+
+.drama-card {
+    background: rgba(18, 21, 40, 0.85);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.drama-card img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    transition: transform 500ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.drama-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--sakura);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.drama-card:hover img {
+    transform: scale(1.05);
+}
+
+.drama-card-content {
+    padding: 18px;
+}
+
+.drama-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.drama-card p {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    color: var(--muted);
+}
+
+.drama-card .rating {
+    color: var(--sakura);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* 5. DYNAMIC INPUT STRIPS & TAGS */
+.search-box {
+    width: 100%;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 24px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    color: var(--moonlight);
+    outline: none;
+    font-size: 1rem;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.search-box input:focus {
+    border-color: var(--sakura);
+    box-shadow: 0 0 0 4px rgba(240, 168, 194, 0.15);
+}
+
+.genre-tag {
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: all var(--transition);
+}
+
+.genre-tag:hover, 
+.genre-tag.active {
+    color: var(--midnight);
+    background: var(--sakura);
+    border-color: var(--sakura);
+    box-shadow: 0 4px 12px rgba(240, 168, 194, 0.3);
+}
+
+/* 6. TYPOGRAPHIC SPECIAL GLOW TEXT EFFECTS */
+.glow-text {
+    color: var(--sakura-light);
+    text-shadow: 0 0 16px rgba(240, 168, 194, 0.45);
+}
+
+/* 7. CARD LINK INTERACTION & CURSOR UTILITIES */
+.drama-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    cursor: pointer !important;
+}
+
+.drama-card, 
+.drama-card img {
+    cursor: pointer !important;
+}
+

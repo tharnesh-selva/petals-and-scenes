@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Collection | Petal & Scene</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/extras.css">
+    <link rel="stylesheet" href="../css/shell.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <style>
+        body { --site-bg-image: url('../assets/background/collection.png'); }
+    </style>
+</head>
+<body>
+    <header class="site-header" id="siteHeader"></header>
+
+    <main class="container">
+        <section class="section section-heading fade-up">
+            <h1>Your collection</h1>
+            <p>Every drama you have saved, sorted by what you plan to watch, are actively watching, or have completed.</p>
+        </section>
+
+        <section class="glass-card" style="padding: 24px; display: flex; gap: 40px; justify-content: center; margin-bottom: 40px; text-align: center;">
+            <div>
+                <p style="font-size: 0.85rem; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Saved</p>
+                <span id="summary-saved" style="font-size: 2rem; font-weight: bold; color: var(--sakura);">0</span>
+            </div>
+            <div>
+                <p style="font-size: 0.85rem; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Plan to watch</p>
+                <span id="summary-plan" style="font-size: 2rem; font-weight: bold; color: var(--moonlight);">0</span>
+            </div>
+            <div>
+                <p style="font-size: 0.85rem; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Watching</p>
+                <span id="summary-watching" style="font-size: 2rem; font-weight: bold; color: var(--moonlight);">0</span>
+            </div>
+            <div>
+                <p style="font-size: 0.85rem; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;">Completed</p>
+                <span id="summary-completed" style="font-size: 2rem; font-weight: bold; color: var(--moonlight);">0</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="drama-grid"></div>
+        </section>
+    </main>
+
+    <footer style="border-top: 1px solid var(--glass-border); padding-block: 40px; margin-top: 60px; text-align: center; color: var(--muted); font-size: 0.9rem;">
+        <p class="glow-text" style="margin-bottom: 12px;">夜桜と物語 – stories worth staying up for.</p>
+        <p>© 2026 Petal & Scene. Made for a college project.</p>
+    </footer>
+
+    <script src="../js/dramas.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/moodbloom.js"></script>
+    <script src="../js/collection.js"></script>
+    <script src="../js/transitions.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/extras.js"></script>
+    <script src="../js/companion.js"></script>
+</body>
+</html>

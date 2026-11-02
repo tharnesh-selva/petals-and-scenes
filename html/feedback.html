@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Petal & Scene</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/extras.css">
+    <link rel="stylesheet" href="../css/shell.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <style>body { --site-bg-image: url('../assets/background/red-sun-mountain.jpg'); }</style>
+</head>
+<body>
+    <header class="site-header" id="siteHeader"></header>
+    <main class="container">
+        <section class="section section-heading fade-up"><h1>Tell us what you think</h1><p>Found a bug, want a feature, or just want to say something kind? Your note is saved with your account on this device.</p></section>
+        <div class="fb-layout">
+            <form id="fbForm" class="glass-card fb-card" novalidate>
+                <label class="fb-label">How is Petal &amp; Scene so far?</label>
+                <div class="stars" id="fbStars" role="radiogroup" aria-label="Rating">
+                    <button type="button" role="radio" aria-checked="false" data-v="1" aria-label="1 star">★</button><button type="button" role="radio" aria-checked="false" data-v="2" aria-label="2 stars">★</button><button type="button" role="radio" aria-checked="false" data-v="3" aria-label="3 stars">★</button><button type="button" role="radio" aria-checked="false" data-v="4" aria-label="4 stars">★</button><button type="button" role="radio" aria-checked="false" data-v="5" aria-label="5 stars">★</button>
+                    <span id="fbStarText" class="star-text">Tap a star</span>
+                </div>
+                <label class="fb-label">What is it about?</label>
+                <div class="chips" id="fbType">
+                    <button type="button" class="genre-tag active" data-v="Idea">Idea</button><button type="button" class="genre-tag" data-v="Bug">Something broke</button><button type="button" class="genre-tag" data-v="Compliment">Compliment</button><button type="button" class="genre-tag" data-v="Other">Other</button>
+                </div>
+                <label class="fb-label" for="fbText">Your message</label>
+                <textarea id="fbText" rows="6" maxlength="800" placeholder="Tell us everything. What did you like? What should change?"></textarea>
+                <div class="fb-foot"><span id="fbCount">0 / 800</span><button class="btn btn-primary" type="submit">Send feedback</button></div>
+                <p id="fbMsg" role="alert"></p>
+            </form>
+            <aside class="glass-card fb-card">
+                <h3>Your past notes</h3>
+                <div id="fbList"></div>
+            </aside>
+        </div>
+    </main>
+    <script src="../js/dramas.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/moodbloom.js"></script>
+    <script src="../js/feedback.js"></script>
+    <script src="../js/transitions.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/extras.js"></script>
+    <script src="../js/companion.js"></script>
+</body>
+</html>

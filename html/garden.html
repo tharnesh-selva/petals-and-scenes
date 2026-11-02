@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Sakura Garden | Petal & Scene</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/extras.css">
+    <link rel="stylesheet" href="../css/shell.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <style>
+        body {
+            --site-bg-image: url('../assets/background/garden.png');
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" id="siteHeader"></header>
+
+    <main class="container">
+        <section class="section section-heading fade-up">
+            <h1>Your sakura garden</h1>
+            <p>A cheerful zen garden for every drama you finish. Pick a flower, plant it in a pot, water it to help it grow, and watch it bloom.</p>
+        </section>
+
+        <!-- Live Live Synchronized Application Data Counter Badges -->
+        <section class="glass-card zen-stats">
+            <div>
+                <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 4px;">Blossoms Planted</p>
+                <span class="count-planted" style="font-size: 1.75rem; font-weight: bold; color: var(--sakura);">0 / 0</span>
+            </div>
+            <div>
+                <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 4px;">Dramas Completed</p>
+                <span class="count-completed" style="font-size: 1.75rem; font-weight: bold; color: var(--moonlight);">0</span>
+            </div>
+            <div>
+                <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 4px;">Garden Level</p>
+                <span class="count-level" style="font-size: 1.75rem; font-weight: bold; color: var(--moonlight);">1</span>
+            </div>
+        </section>
+
+        <!-- Two Column Main Workspace Split Grid Layout Grid -->
+        <div class="zen-layout">
+            
+            <!-- Interactive HTML5 Canvas Render Card Module Box -->
+            <div class="glass-card zen-board">
+                <canvas id="gardenCanvas" aria-label="Your zen garden. Pick a tool and click a pot."></canvas>
+            </div>
+
+            <!-- Custom Graphic Seed Selection Sidebar Panel Controller Cards -->
+            <div>
+                <div class="glass-card" style="padding: 24px; margin-bottom: 24px;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 16px; color: var(--moonlight);">Tool</h3>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <label style="display:flex;align-items:center;gap:10px;cursor:pointer;"><input type="radio" name="gardenTool" class="tool-radio" value="plant" checked style="accent-color: var(--sakura);"><div><strong>Plant</strong><p style="font-size:.75rem;margin:0">Click an empty pot.</p></div></label>
+                        <label style="display:flex;align-items:center;gap:10px;cursor:pointer;"><input type="radio" name="gardenTool" class="tool-radio" value="water" style="accent-color: var(--sakura);"><div><strong>Water</strong><p style="font-size:.75rem;margin:0">Helps seedlings grow faster.</p></div></label>
+                        <label style="display:flex;align-items:center;gap:10px;cursor:pointer;"><input type="radio" name="gardenTool" class="tool-radio" value="remove" style="accent-color: var(--sakura);"><div><strong>Dig up</strong><p style="font-size:.75rem;margin:0">Remove a flower.</p></div></label>
+                    </div>
+                </div>
+                <div class="glass-card" style="padding: 24px;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 16px; color: var(--moonlight);">Choose a flower</h3>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                        <input type="radio" name="flowerSeed" class="flower-radio" value="blossom" checked style="accent-color: var(--sakura);">
+                        <div>
+                            <strong style="color: var(--moonlight);">Cherry Blossom</strong>
+                            <p style="font-size: 0.75rem; color: var(--muted); margin-top: 2px;">Uses cherry_blossom.svg asset.</p>
+                        </div>
+                    </label>
+                    
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                        <input type="radio" name="flowerSeed" class="flower-radio" value="branch" style="accent-color: var(--sakura);">
+                        <div>
+                            <strong style="color: var(--moonlight);">Flower Branch</strong>
+                            <p style="font-size: 0.75rem; color: var(--muted); margin-top: 2px;">Uses flower_branch.svg asset.</p>
+                        </div>
+                    </label>
+                    
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                        <input type="radio" name="flowerSeed" class="flower-radio" value="tulip" style="accent-color: var(--sakura);">
+                        <div>
+                            <strong style="color: var(--moonlight);">Pink Tulip</strong>
+                            <p style="font-size: 0.75rem; color: var(--muted); margin-top: 2px;">Uses pink_tulip.svg asset.</p>
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="border-top: 1px solid var(--glass-border); padding-block: 40px; margin-top: 60px; text-align: center; color: var(--muted); font-size: 0.9rem;">
+        <p class="glow-text" style="margin-bottom: 12px;">夜桜と物語 – stories worth staying up for.</p>
+        <p>© 2026 Petal & Scene. Made for a college project.</p>
+    </footer>
+
+    <script src="../js/dramas.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/moodbloom.js"></script>
+    <script src="../js/constellation.js"></script>
+    <script src="../js/garden.js"></script>
+    <script src="../js/transitions.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/extras.js"></script>
+    <script src="../js/companion.js"></script>
+</body>
+</html>

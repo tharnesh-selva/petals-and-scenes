@@ -1,0 +1,205 @@
+/* ==========================================================================
+   PETAL & SCENE — GLOBAL ARCHITECTURE & SYSTEM TOKENS
+   ========================================================================== */
+
+/* 1. TYPOGRAPHY MATRIX IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* 2. DESIGN SYSTEM VARIABLE TOKENS */
+:root {
+    /* Color Palette Bricks */
+    --midnight: #0b0d19;
+    --midnight-soft: #121528;
+    --deep-indigo: #1c2039;
+    --deep-plum: #38243f;
+
+    /* Theme Accent Scales */
+    --sakura: #f0a8c2;
+    --sakura-light: #ffd8e5;
+    --rose: #bd7898;
+    --moonlight: #fff4f0;
+    --muted: #b8b5c9;
+
+    /* Alpha Channel Layer Elements */
+    --glass: rgba(11, 13, 25, 0.65);
+    --glass-border: rgba(255, 216, 229, 0.16);
+
+    /* Typography Variable Framework */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', Arial, sans-serif;
+
+    /* Border Radius Scaling Scales */
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 26px;
+
+    /* Animation Transition Timing */
+    --transition: 300ms ease;
+}
+
+/* 3. STRUCTURAL BASE RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    background-color: var(--midnight);
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--midnight);
+    
+    /* Variable assignments connect background filters directly to the settings engine */
+    background-image: var(--bg-tint-gradient, linear-gradient(to bottom, rgba(11, 13, 25, 0.8), #0b0d19)), var(--site-bg-image);
+    
+    /* Enforces locked full-screen background configurations across all sub-windows */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+
+    color: var(--moonlight);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* SYSTEM UPGRADE: Bulletproof Native CSS Fallback Animation */
+    animation: simpleFadeIn 0.5s ease-in-out forwards !important;
+}
+
+/* 4. BASE TYPOGRAPHY LAYOUT HOOKS */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    color: var(--moonlight);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+p {
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+/* 5. INTERACTIVE BASE OVERRIDES */
+button, input, select, textarea {
+    font-family: var(--font-body);
+    font-size: inherit;
+    color: inherit;
+    background: transparent;
+    border: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+::selection {
+    color: var(--midnight);
+    background: var(--sakura);
+}
+
+/* Keyboard Visibility Accent Rules */
+:focus-visible {
+    outline: 2px solid var(--sakura);
+    outline-offset: 4px;
+}
+
+/* 6. STRUCTURAL WRAPPER CONTAINERS */
+.container {
+    width: min(1200px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.section-heading {
+    margin-bottom: 32px;
+}
+
+.section-heading p {
+    margin-top: 10px;
+    max-width: 620px;
+    font-size: 1.1rem;
+}
+
+/* 7. CUSTOM BROWSER SCROLLBAR COMPONENT OPTIONS */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--midnight);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--deep-plum);
+    border-radius: 20px;
+    border: 2px solid var(--midnight);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rose);
+}
+
+/* 8. APPLICATION ACCESSIBILITY FALLBACK CLASSES */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Quick exit animation hook handled by transitions.js */
+body.fade-out-active {
+    opacity: 0 !important;
+    transition: opacity 0.5s ease-in-out !important;
+}
+
+/* Native hardware transition curve */
+@keyframes simpleFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

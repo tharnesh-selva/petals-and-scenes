@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Petal & Scene</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/extras.css">
+    <link rel="stylesheet" href="../css/shell.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <style>body { --site-bg-image: url('../assets/background/meadow-sky.jpg'); }</style>
+</head>
+<body>
+    
+    <main class="container">
+        <section class="section auth-wrap">
+            <a class="auth-brand" href="#" onclick="return false">夜桜 Petal &amp; Scene</a>
+            <div class="glass-card auth-card fade-up">
+                <h1>Register</h1>
+                <p class="auth-sub">Make an account to keep your dramas, diary and garden together.</p>
+                <form id="authForm" data-mode="register" novalidate="false">
+                    <label>Your name</label><input type="text" name="name" required placeholder="e.g. Priya">
+                    <label>Email</label><input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+                    <label>Password</label><div class="pw-row"><input type="password" name="password" required autocomplete="new-password" placeholder="Password"><button type="button" class="show-pw">Show</button></div>
+                    <label>Confirm password</label><input type="password" name="confirm" required autocomplete="new-password" placeholder="Type it again">
+                    <button class="btn btn-primary" type="submit" style="width:100%;margin-top:18px">Register</button>
+                    <p id="authMsg" role="alert"></p>
+                </form>
+                <p class="auth-alt">Already registered? <a href="login.html">Login</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="../js/dramas.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/moodbloom.js"></script>
+    <script src="../js/transitions.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/extras.js"></script>
+    <script src="../js/companion.js"></script>
+</body>
+</html>
